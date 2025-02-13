@@ -1,0 +1,18 @@
+#
+# -- Grapple Plugin --
+#
+# ver 1.18.2+
+
+Multiply: 0.3
+# Multiply - Adjusts the pulling force of the grapple (グラップルの引っ張る力を調整します)
+FallDamage: 0.25
+# FallDamage - Multiplier for fall damage when holding the grapple. Set to "1" for normal damage. (グラップルを持っているときの落下ダメージの倍率です。通常の場合は"1"と入力してください)
+GrappleName: "Grapple"
+# GrappleName - Name of the grapple. (グラップルの名前です)
+Lore:
+  - "ぴょんぴょん飛べるグラップル"
+  - "持っていると75%ダメージを軽減する"
+# Lore - Description text. (説明文です)
+
+noPermissionMessage: "You do not have permission!" # あなたには権限がありません!
+# noPermissionMessage - Message shown when a player without permission uses /grapple. (権限がないプレイヤーが /grapple のコマンドを打った時のメッセージです)

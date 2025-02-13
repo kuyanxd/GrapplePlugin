@@ -9,7 +9,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerFishEvent;
 
-public class PlayerFishListener implements Listener {
+public class EventListener implements Listener {
     @EventHandler
     public void onPlayerFish(PlayerFishEvent event){
         if (event.getState().equals(PlayerFishEvent.State.REEL_IN) || event.getState().equals(PlayerFishEvent.State.IN_GROUND)) {

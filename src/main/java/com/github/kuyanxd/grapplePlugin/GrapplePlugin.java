@@ -2,19 +2,15 @@ package com.github.kuyanxd.grapplePlugin;
 
 import com.github.kuyanxd.grapplePlugin.Commands.GrappleGiveCommand;
 import com.github.kuyanxd.grapplePlugin.Items.Items;
-import com.github.kuyanxd.grapplePlugin.Listeners.PlayerFishListener;
+import com.github.kuyanxd.grapplePlugin.Listeners.EventListener;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.PluginCommand;
-import org.bukkit.event.Listener;
 import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
-
-import java.util.Arrays;
-import java.util.List;
 
 public final class GrapplePlugin extends JavaPlugin {
 
@@ -27,7 +23,7 @@ public final class GrapplePlugin extends JavaPlugin {
     @Override
     public void onEnable() {
         instance = this;
-
+        saveDefaultConfig();
         getLogger().info("-- Grapple Plugin --");
         getLogger().info("https://discord.gg/mFKhsQ6tTS");
 
@@ -40,13 +36,7 @@ public final class GrapplePlugin extends JavaPlugin {
 
     private void registerListeners() {
         PluginManager pluginManager = getServer().getPluginManager();
-        List<Listener> listeners = Arrays.asList(
-                new PlayerFishListener()
-        );
-
-        for (Listener listener : listeners) {
-            pluginManager.registerEvents(listener, this);
-        }
+        pluginManager.registerEvents(new EventListener(),this);
     }
 
     private void registerCommand(String name, CommandExecutor executor) {
