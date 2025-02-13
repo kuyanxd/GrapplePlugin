@@ -17,6 +17,7 @@ public class Items {
         meta.setDisplayName(ChatColor.YELLOW + grappleName);
         List<String> lore = GrapplePlugin.getInstance().getConfig().getStringList("Lore");
         meta.setLore(new ArrayList<>(lore));
+        meta.setUnbreakable(true);
         item.setItemMeta(meta);
         return item;
     }
