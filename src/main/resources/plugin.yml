@@ -1,0 +1,14 @@
+name: GrapplePlugin
+version: 'v1.0'
+main: com.github.kuyanxd.grapplePlugin.GrapplePlugin
+api-version: '1.18'
+website: https://github.com/kuyanxd
+author: kuyan
+commands:
+  grapple:
+    aliases: [grp]
+    description: Gives the player a grappling hook.
+permissions:
+  grappleplugin.use:
+    description: Allows the player to use the /grapple command.
+    default: op
